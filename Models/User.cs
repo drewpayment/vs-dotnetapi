@@ -6,6 +6,7 @@ namespace dotnetapi.Models
     public class User
     {
         public int Id { get; set; }
+        public int RoleId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Username { get; set; }
@@ -19,5 +20,6 @@ namespace dotnetapi.Models
         //RELATIONSHIPS
         public UserDetail Detail { get; set; }
         public Agent Agent { get; set; }
+        public Role Role { get; set; }
     }
 }

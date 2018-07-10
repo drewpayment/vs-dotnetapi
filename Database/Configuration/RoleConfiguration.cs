@@ -20,6 +20,9 @@ namespace dotnetapi.Database.Configuration
             b.Property(e => e.CreatedAt);
             b.Property(e => e.UpdatedAt);
             b.Property(e => e.ModifiedBy).IsRequired();
+
+            // RELATIONSHIPS
+            b.HasMany(u => u.Users).WithOne(r => r.Role).HasForeignKey(u => u.RoleId);
         }
     }
 }

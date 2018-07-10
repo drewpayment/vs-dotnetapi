@@ -1,5 +1,6 @@
 
 using System;
+using System.Collections.Generic;
 
 namespace dotnetapi.Models
 {
@@ -13,5 +14,8 @@ namespace dotnetapi.Models
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
         public int ModifiedBy { get; set; }
+
+        // RELATIONSHIPS
+        public List<User> Users { get; set; }
     }
 }
